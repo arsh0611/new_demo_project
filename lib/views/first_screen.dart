@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:newdemoproject/widgets/NavDrawerWIdget.dart';
+import 'package:newdemoproject/providers/counterProvider.dart';
+import 'package:provider/src/provider.dart';
 
 class FirstScreen extends StatefulWidget {
   @override
@@ -13,7 +15,7 @@ class _FirstScreenState extends State<FirstScreen> {
     return Scaffold(
       drawer: NavDrawer(),
       appBar: AppBar(
-        title: Text("Arsh Square collaboration"),
+        title: Text("Arsh Square collaboration${context.watch<Counter>().count}"),
       ),
       body: Center(
         child: Column(
@@ -27,6 +29,15 @@ class _FirstScreenState extends State<FirstScreen> {
         ),
         ]
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        key: const Key('increment_floatingActionButton'),
+
+        /// Calls `context.read` instead of `context.watch` so that it does not rebuild
+        /// when [Counter] changes.
+        onPressed: () => context.read<Counter>().increment(),
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
       ),
 
     );

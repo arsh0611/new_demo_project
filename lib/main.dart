@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:newdemoproject/views/first_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:newdemoproject/providers/counterProvider.dart';
+import 'package:flutter/foundation.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => Counter()),
+      ],
+      child:  MyApp(),
+    ),
+  );
 }
 class MyApp extends StatefulWidget {
   @override
