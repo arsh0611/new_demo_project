@@ -15,7 +15,7 @@ class _FirstScreenState extends State<FirstScreen> {
     return Scaffold(
       drawer: NavDrawer(),
       appBar: AppBar(
-        title: Text("Arsh Square collaboration${context.watch<Counter>().count}"),
+        title: Text("Arshs Square collaboration${context.watch<Counter>().count}"),
       ),
       body: Center(
         child: Column(
@@ -27,8 +27,18 @@ class _FirstScreenState extends State<FirstScreen> {
         Text(
           'Arsh Junior Develper'
         ),
+            Container(
+              child: ElevatedButton(
+                onPressed: (){
+                  Navigator.pushNamed(context, '/second');
+                },
+                child: Text("Collaboration Chapter2"),
+              ),
+            ),
         ]
+
         ),
+
       ),
       floatingActionButton: FloatingActionButton(
         key: const Key('increment_floatingActionButton'),
