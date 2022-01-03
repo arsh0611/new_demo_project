@@ -25,7 +25,7 @@ class _FirstScreenState extends State<FirstScreen> {
           'Arsh Senior Developers',
         ),
         Text(
-          'Arsh Junior Develper'
+          'Arsh heer Junior Develper'
         ),
             Container(
               child: ElevatedButton(
