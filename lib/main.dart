@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:newdemoproject/providers/counterProvider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:newdemoproject/views/second_screen.dart';
+import 'package:newdemoproject/views/splash_screen.dart';
 
 void main() {
   runApp(
@@ -30,7 +31,7 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/second': (context) =>  SecondScreen(),
       },
-      home: FirstScreen(),
+      home: Splash(),
     );
   }
 }
