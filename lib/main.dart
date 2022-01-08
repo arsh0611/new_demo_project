@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newdemoproject/views/Welcome.dart';
 import 'package:newdemoproject/views/first_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:newdemoproject/providers/counterProvider.dart';
@@ -29,9 +30,11 @@ class _MyAppState extends State<MyApp> {
       title: 'Arsh Heer',
       theme: ThemeData.light(),
       routes: {
+        '/first': (context) =>  FirstScreen(),
         '/second': (context) =>  SecondScreen(),
       },
       home: Splash(),
+
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newdemoproject/views/Welcome.dart';
 import 'package:newdemoproject/views/first_screen.dart';
 
 class Splash extends StatefulWidget {
@@ -31,7 +32,7 @@ class _SplashState extends State<Splash> {
     await Future.delayed(Duration(milliseconds: 10),(){});
     _updateState();
     await Future.delayed(Duration(milliseconds: 2030),(){});
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>FirstScreen()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Welcome()));
   }
   @override
   Widget build(BuildContext context) {
