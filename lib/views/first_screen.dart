@@ -51,7 +51,7 @@ class _FirstScreenState extends State<FirstScreen> {
 
       ),
       bottomNavigationBar: FABBottomAppBar(
-        centerItemText: 'SELL',
+        centerItemText: 'SELLS',
         color: Colors.grey,
         selectedColor: Colors.red,
         notchedShape: CircularNotchedRectangle(),
